@@ -1,0 +1,39 @@
+.nav {
+    background-color: white;
+    padding: 12px 60px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    // TODO: add scroll bx
+    // box-shadow: 0 1px 5px 1px lightgray;
+    justify-content: space-between;
+    align-items: baseline;
+
+    h1 {
+        margin: 0
+    }
+
+    .nav__items {
+        display: flex;
+        list-style: none;
+        font-weight: 700;
+        li {
+            margin-right: 2rem;
+        }
+    }
+
+    .nav__item {
+        text-decoration: none;
+        color: black;
+        &:active {
+            color: purple;
+        }
+    }
+}
+
+
+.spacer {
+    margin-top: 72px;
+}

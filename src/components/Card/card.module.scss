@@ -1,0 +1,105 @@
+@mixin gradient {
+    @for $i from 1 to 4 {
+    &:nth-of-type(#{$i}) {
+      background-color: mix($darkBlue, #C34B3C, 100% - (($i - 1) * 33%));
+    }
+  }
+}
+
+.card {
+    padding: 0 2rem 2rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    max-width: 1100px;
+
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 0rem;
+    }
+
+    .location {
+        text-transform: uppercase;
+    }
+
+    p {
+        margin: .25rem 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding : 0;
+        max-width: 60ch;
+    }
+}
+
+.experience {
+    @include gradient;
+    color: white;
+
+    .location {
+        margin-top: .75rem;
+        margin-bottom: 0.5rem;
+        color: #FFDE8C;
+    }
+
+    .image {
+        top: 0;
+        left: 2rem;
+        max-height: 20rem;
+    }
+
+    h4 {
+        margin-bottom: .5rem;
+    }
+    
+    h5 {
+        font-weight: 600;
+        font-size: 1rem;
+        margin: 0;
+    }
+}
+
+.education.card {
+    background: 
+    linear-gradient(to top right,transparent 50%,black 0) top right/20rem 20rem no-repeat, #C34B3C; 
+    .location {
+        color: white;
+    }
+    
+    div {
+        max-width: 65ch;
+        margin-bottom: .25rem;
+    }
+    
+    ul, li, h5 {
+        display: inline;
+    }
+}
+ 
+.project {
+    padding-top: .5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: .5rem;
+    border: 2px black solid;
+    flex: 0 1 calc(50% - .5rem);
+    justify-content: flex-end;
+    &:nth-child(2n + 1) {
+        margin-right: 1rem;
+    }
+
+    .title {
+        margin-top: 2rem;
+    }
+
+    .location {
+        order: -1;
+        justify-self: flex-start;
+        font-size: .8rem;
+    }
+}
+
+
