@@ -6,3 +6,5 @@ phases:
     commands:
     - yarn install
     - yarn build
+    - aws s3 sync build s3://sn-react-test --delete
+    - aws s3 sync assets s3://sn-react-test/assets
