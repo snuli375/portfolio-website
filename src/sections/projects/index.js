@@ -4,7 +4,7 @@ import DoggoGif from '../../assets/construction-working.gif'
 
 const Projects = () => {
     return (
-        <div className={''}>
+        <div className={styles.projects}>
             <h2 id="projects">Projects</h2>
             {/* <div className={styles.projects}>
                 <Card title="Filmify"

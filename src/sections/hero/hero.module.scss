@@ -1,16 +1,42 @@
 .hero {
     display: flex;
+    flex-flow: column nowrap;
 }
 
-.hero__bottom {
+.top {
     margin-top: 8rem;
+    max-width: 100%;
 }
 
-.hero__heading {
-    font-size: 3rem;
-    margin-bottom: 0;
+.heading {
+    font-size: 2.25rem;
+    @include mq($bp-md) {
+        font-size: 3rem;
+    }
+    margin: 0 auto;
 }
 
-.hero__subheading {
+.subheading {
+    @include mq($max: $bp-sm) {
+        margin-top: .5rem;
+        font-size: 1.25rem;
+    }
     margin-top: 0;
 }
+
+.image {
+    height: auto;
+    max-width: 100%;
+    @include mq($bp-lg) {
+        max-width: calc($bp-lg - 2 * $body-margin);
+    }
+}
+
+.icon {
+    color: black;
+    margin-right: .5rem;
+    :hover {
+        color: purple;
+    }
+}
+

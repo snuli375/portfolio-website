@@ -1,6 +1,9 @@
 .nav {
     background-color: white;
-    padding: 12px 60px 0;
+    padding: 12px 2rem;
+    @include mq($bp-lg) {
+        padding: 12px $body-margin 0;
+    }
     position: fixed;
     top: 0;
     left: 0;
@@ -9,18 +12,44 @@
     // TODO: add scroll bx
     // box-shadow: 0 1px 5px 1px lightgray;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
+    @include mq($max: $bp-md) {
+        align-items: flex-end;
+    }
 
     h1 {
         margin: 0
+    }
+
+    .nav__items__wrapper {
+        @include mq($max: $bp-md) {
+            background-color: white;
+            position: fixed;
+            top: 40px;
+            right: 0;
+            left: 0;
+            font-size: 1.25rem;
+            display: none;
+            &.is-visible {
+                display: block;
+            }
+        }
     }
 
     .nav__items {
         display: flex;
         list-style: none;
         font-weight: 700;
+        // @include mq($bp-md) {
         li {
-            margin-right: 2rem;
+        margin-left: 2rem;
+        }
+        // }
+        @include mq($max: $bp-md) {
+            flex-direction: column;
+            > li {
+                margin-bottom: .25rem;
+            }
         }
     }
 
@@ -37,3 +66,7 @@
 .spacer {
     margin-top: 72px;
 }
+
+:export {
+    MOBILE_BP: strip-unit($bp-md);
+  }
