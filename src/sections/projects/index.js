@@ -6,7 +6,7 @@ const Projects = () => {
     return (
         <div className={styles.projects}>
             <h2 id="projects">Projects</h2>
-            {/* <div className={styles.projects}>
+            <div className={styles.projects}>
                 <Card title="Filmify"
                     location="Interaction Design Team Capstone">
                 </Card>
@@ -23,9 +23,9 @@ const Projects = () => {
                     location="CS 5610: Web Development">
                     <p></p>
                 </Card>
-            </div> */}
-            <p>In progress!!! Will be updated soon!</p>
-            <img src={DoggoGif} />
+            </div>
+            {/* <p>In progress!!! Will be updated soon!</p>
+            <img src={DoggoGif} /> */}
         </div>
     )
 }
